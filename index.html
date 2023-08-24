@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Saksham Pokharel - Portfolio</title>
+   
+</head>
+
+<style>
+   
+   
+ /* General Styles */
+ body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    
+    /* Name Animation ... */
+
+    .animated-letter {
+        display: inline-block;
+        transform-origin: center;
+        animation: letterAnimation 5s infinite;
+    }
+
+    @keyframes letterAnimation {
+        0%, 100% {
+            transform: translateZ(0);
+            color: #000;
+        }
+
+        50% {
+            transform: translateZ(100px) rotateY(360deg);
+            color: var(--random-color); /* Use CSS variable for color */
+        }
+    }
+    /* Name Animation */
+    .name-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        font-size: 2rem;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .animated-letter {
+        display: inline-block;
+        transform-origin: center;
+        animation: letterAnimation 5s infinite;
+    }
+
+    @keyframes letterAnimation {
+        0% {
+            transform: translateZ(0);
+            color: #000;
+        }
+
+        50% {
+            transform: translateZ(100px) rotateY(360deg);
+            color: var(--random-color); /* Change to use CSS variable */
+        }
+
+        100% {
+            transform: translateZ(0);
+            color: #000;
+        }
+    }
+
+    /* Skills Animation */
+    .skill-box {
+        background-color: #fff;
+        padding: 30px;
+        margin: 20px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+    }
+
+    .skill-box i {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: #343a40;
+    }
+
+    .skill-box h3 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .skill-box p {
+        font-size: 1rem;
+    }
+
+    .skill-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes randomColor {
+        0%, 100% {
+            color: #000;
+        }
+        25% {
+            color: #f00;
+        }
+        50% {
+            color: #0f0;
+        }
+        75% {
+            color: #00f;
+        }
+    }
+    .color-red {
+    color: #f00;
+}
+
+.color-green {
+    color: #0f0;
+}
+
+.color-blue {
+    color: #00f;
+}
+
+.contact-section {
+            background-color: #000;
+            padding: 50px 0;
+        }
+
+        .contact-icons-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+        .contact-icons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateX(60deg);
+            transform-style: preserve-3d;
+            animation: rotateCircle 20s infinite linear;
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            transform-origin: center;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .contact-icon:hover {
+            transform: translateZ(50px);
+            color: #ff9900;
+        }
+
+        .fa-github {
+            transform: rotateY(0deg) translateZ(150px);
+        }
+
+        .fa-linkedin {
+            transform: rotateY(120deg) translateZ(150px);
+        }
+
+        .fa-discord {
+            transform: rotateY(240deg) translateZ(150px);
+        }
+
+        @keyframes rotateCircle {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+</style>
+
+<body>
+    <!-- Homepage Section -->
+    <section id="intro" class="py-5 text-center">
+        <div class="container">
+            <h1 class="display-4">Hi, I'm Saksham Pokharel</h1>
+        </div>
+    </section>
+
+    <!-- Name Animation -->
+    <div class="name-container">
+        <span class="animated-letter">S</span>
+        <span class="animated-letter">a</span>
+        <span class="animated-letter">k</span>
+        <span class="animated-letter">s</span>
+        <span class="animated-letter">h</span>
+        <span class="animated-letter">a</span>
+        <span class="animated-letter">m</span>
+        <span class="animated-letter"> </span>
+        <span class="animated-letter">P</span>
+        <span class="animated-letter">o</span>
+        <span class="animated-letter">k</span>
+        <span class="animated-letter">h</span>
+        <span class="animated-letter">a</span>
+        <span class="animated-letter">r</span>
+        <span class="animated-letter">e</span>
+        <span class="animated-letter">l</span>
+    </div>
+  <!-- Contact Me Section -->
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="text-white mb-4">Contact Me</h2>
+                <div class="contact-icons">
+                    <div class="icon-orbit"></div>
+                    <a href="https://github.com/yourgithubusername" target="_blank" class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <div class="icon-orbit"></div>
+                    <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <div class="icon-orbit"></div>
+                    <a href="https://discordapp.com/users/yourdiscordid" target="_blank" class="contact-icon">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- <section id="contact" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="text-white mb-4">Contact Me</h2>
+                <div class="contact-icons">
+                    <a href="https://github.com/saksham-x" target="_blank" class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/saksham-pokharel-74b521277/" target="_blank" class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+              
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <p>I'm a computer engineering student in my 4th year at National College of Engineering. I'm passionate
+                about both front-end and back-end development. I'm currently focusing on building my skills as a
+                full-stack developer.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">My Skills</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <i class="fas fa-code"></i>
+                        <h3>Web Development</h3>
+                        <p>HTML, CSS, JavaScript, React</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Graphics Designing</h3>
+                        <p> Illustrator, Canva</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <i class="fas fa-video"></i>
+                        <h3>Video Editing</h3>
+                        <p>Premiere Pro, Cap-Cut Pro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Define an array of color classes
+        const colorClasses = ['color-red', 'color-green', 'color-blue'];
+
+        // Function to apply random color class to an element
+        function applyRandomColor(element) {
+            const randomColorClass = colorClasses[Math.floor(Math.random() * colorClasses.length)];
+            element.className = ''; // Clear existing classes
+            element.classList.add('animated-letter', randomColorClass);
+        }
+
+        // Apply random colors to each letter on load
+        document.addEventListener("DOMContentLoaded", function () {
+            const animatedLetters = document.querySelectorAll('.animated-letter');
+            animatedLetters.forEach(letter => {
+                applyRandomColor(letter);
+            });
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+</body>
+
+</html>
